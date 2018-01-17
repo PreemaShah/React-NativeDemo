@@ -1,13 +1,13 @@
 import React from 'react';
 import {Text,View,Image,Linking} from 'react-native';
 import Card from './Card';
-import CardSection from './CardItem';
+import CardItem from './CardItem';
 
 const albumDetails=({album})=>{
     const {title,artist,thumbnail_image,image,url}=album;
     return(
         <Card>
-            <CardSection style={Styles.headerStyle}>
+            <CardItem style={Styles.headerStyle}>
                 <View style={Styles.headerStyle}>
                     <Image
                         style={Styles.headerImageStyle}
@@ -17,12 +17,12 @@ const albumDetails=({album})=>{
                     <Text style={Styles.textStyle}>{title}</Text>
                     <Text>{artist}</Text>
                 </View>
-            </CardSection>
-            <CardSection>
+            </CardItem>
+            <CardItem>
                 <Image
                     style={Styles.imageSectionStyle}
                     source={{uri:image}}/>
-            </CardSection>
+            </CardItem>
         </Card>
     );
 };
